@@ -1,0 +1,48 @@
+[
+    {
+        "name": "return_info",
+        "description": "Return the info on the person",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the person. This CANNOT have the word 'Person' in it."
+                },
+                "age": {
+                    "type": "integer",
+                    "description": "The estimated age of the person."
+                },
+                "interests": {
+                    "type": "array",
+                    "description": "Interests that the person has. Each of these should be a few words long max.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "dislikes": {
+                    "type": "array",
+                    "description": "Things the person dislikes. Each of these should be a few words long max.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "personality": {
+                    "type": "string",
+                    "description": "A short description of the person's personality."
+                }
+            }
+        },
+        "required": []
+    },
+    {
+        "name": "forget_person",
+        "description": "Completely forget the person.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+            }
+        },
+        "required": []
+    }
+]
