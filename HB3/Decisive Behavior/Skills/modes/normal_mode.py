@@ -25,6 +25,7 @@ lookat_actions = system.import_library("../actions/lookat_actions.py")
 # mq_vqa_gpt4v = system.import_library("../../../../Dev/PLI/MQChat/mq_vqa_gpt4v.py")
 mq_actions = system.import_library("../../../../Dev/PLI/MQChat/GPTFuncCalls/funcs.py")
 mq_visual_funcs = system.import_library("../../../../Dev/PLI/MQChat/GPTFuncCalls/mq_visual_funcs.py")
+mq_nlp_funcs = system.import_library("../../../../Dev/MQ/functions/nlp_funcs.py")
 
 
 #### Idle Model ####
@@ -70,6 +71,7 @@ MODEL_FUNCTIONS_IDLE = [
     mq_actions.switch_to_proactive_chat,
     mq_actions.switch_to_reactive_chat,
     # vqa.vqa, # disable until look_at / thinking animation is compatible
+    mq_nlp_funcs.rag_func,
     system_actions.turn_volume_up,
     system_actions.turn_volume_down,
     system_actions.change_head_colour,
